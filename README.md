@@ -40,7 +40,7 @@ flowchart LR
     I -->|usable triage| J[Gmail draft in the thread]
     I -->|unusable answer or prompt injection| P[No draft]
     I -->|Claude down| R[Retry on a later run, waits double]
-    J --> K[Labels, HubSpot contact and note]
+    J --> K[Labels, HubSpot contact and note if Claude triaged it]
     P --> K
     K -->|needs a person| M[Slack alert with link]
     G -->|no emails left| Z{Any problems?}
